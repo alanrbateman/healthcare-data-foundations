@@ -1,0 +1,8 @@
+record_id,clinician_id,given_name,family_name,specialty_name,site,accepting_new_patients
+S001,DEMO-001,Maya,Bennett,Cardio,North Campus,Yes
+S002,DEMO-002,Oliver,Chen,Internal Med,Main Campus,Yes
+S003,DEMO-003,Sofia,Patel,Orthopedics,South Campus,No
+S004,DEMO-004,James,Rivera,Family Practice,West Clinic,Yes
+S005,DEMO-005,Nora,Ellis,Neurology,Main Campus,Yes
+S006,DEMO-006,Ethan,Brooks,Cardiology,South Campus,Yes
+S007,,Ava,Morgan,Internal Medicine,East Clinic,Yes
