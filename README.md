@@ -1,38 +1,74 @@
 # Healthcare Data Foundations
 
-### Turning fragmented data into information people and applications can use
+### Turning fragmented healthcare data into consistent, traceable information
 
-Healthcare organizations collect data across many systems. Different definitions, inconsistent formats, duplicate records and missing information can make that data difficult to use, even when the systems are connected.
+Healthcare organizations can connect systems and still struggle to use the data they exchange. Different definitions, duplicate records and conflicting information can undermine patient access, operational decisions and confidence in the applications consuming that data.
 
-This demonstration explores how to bring those sources together, standardize information, identify conflicts and prepare trustworthy outputs for downstream applications.
+This working demonstration brings together fictional physician records from credentialing and scheduling systems. It standardizes information, preserves its source and separates records ready for downstream use from records requiring human review.
 
-## First demonstration: Physician directory data
+## Why this matters
 
-A fictional health system has physician information spread across credentialing, scheduling, EHR, and directory systems. Each source represents the same physicians differently.
+A physician directory needs more than names and contact details. Its usefulness depends on reliable specialties, locations and availability, and a clear process for resolving discrepancies.
 
-The demonstration will show how to:
+This project demonstrates how explicit business rules can make those discrepancies visible before information reaches another application.
 
-- Map different source formats into a consistent structure.
-- Standardize specialties, locations and other fields.
-- Identify potential duplicate records.
-- Flag conflicting or incomplete information for review.
-- Preserve source information so decisions can be traced.
-- Produce curated records for a directory or another application.
+## Verified demonstration results
 
-The business goal is to make physician information easier to maintain and use, supporting patient access, reliable scheduling and in-network referrals.
+The workflow ran successfully with the following results:
 
-## My perspective and contribution
+| Measure | Result |
+|---|---:|
+| Source records processed | 15 |
+| Consolidated records passing demonstration checks | 4 |
+| Records requiring review | 4 |
+| Identical duplicate records consolidated | 1 |
+
+The eight output records retain provenance for all 15 input records. The two records without provider identifiers remain separate.
+
+### Decisions illustrated
+
+- **Standardize terminology:** Convert specialty abbreviations into consistent labels while retaining the original values.
+- **Preserve evidence:** Consolidate an identical duplicate without losing either source record ID.
+- **Expose uncertainty:** Flag different locations rather than assume one source is correct.
+- **Identify business-rule concerns:** Flag pending credentials alongside acceptance of new patients.
+- **Avoid unsupported matching:** Keep records with missing identifiers separate, even when their names match.
+
+Four records passing these checks does not establish clinical accuracy or production readiness.
+
+## Explore the demonstration
+
+- [Credentialing input](data/credentialing.csv)
+- [Scheduling input](data/scheduling.csv)
+- [Data quality and review rules](docs/data-quality-rules.md)
+- [Curation script](scripts/curate.py)
+- [Curated records](data/ready_records.json)
+- [Records requiring review](data/review_records.json)
+- [Run summary](data/summary.json)
+
+The linked JSON files are saved results from the verified run.
+
+## My perspective and development approach
 
 My background spans hospital operations, technology implementation, consulting and enterprise healthcare software sales, including physician data and provider directory solutions.
 
-I bring that experience to defining the business problem, establishing requirements, guiding AI-assisted development and evaluating whether the results meet the intended need.
+I bring that experience to framing business requirements, evaluating stakeholder needs and assessing whether technology produces useful outcomes.
 
-## Development approach
+This demonstration was developed with AI assistance. AI helped draft the code and documentation; I configured the repository, ran the workflow and confirmed the summary against the expected results. The processing rules are explicit and deterministic. No AI model is called during execution.
 
-AI tools support development and troubleshooting. Business rules, review decisions and validation remain explicit so that the output can be examined and explained.
+## Run it
 
-## Project status
+In GitHub, open **Actions → Run Healthcare Data Demo → Run workflow**.
 
-Initial scope defined. Synthetic datasets and a working demonstration are the next steps.
+The workflow runs the Python script, displays a summary and provides downloadable results. Each run generates files in `outputs/`; it does not automatically update the saved examples linked above.
 
-All demonstration records will be fictional. This project is a portfolio exercise and does not represent a production clinical system or use patient information, employer data or proprietary product code.
+Alternatively, with Python 3.13 installed, run from the repository root:
+
+`python scripts/curate.py`
+
+No third-party Python packages are required.
+
+## Scope
+
+All records are fictional. This is a small portfolio demonstration, not a production interoperability platform. It uses no patient information, employer data or proprietary product code.
+
+The current scope covers field mapping, specialty normalization, identifier-based grouping, duplicate handling, review flags and source traceability. Human review and correction of flagged records are outside this version.
