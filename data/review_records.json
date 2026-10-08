@@ -1,0 +1,198 @@
+[
+  {
+    "provider_id": "DEMO-005",
+    "review_reference": "DEMO-005",
+    "first_name": [
+      "Nora"
+    ],
+    "last_name": [
+      "Ellis"
+    ],
+    "specialty": [
+      "Neurology"
+    ],
+    "location": [
+      "Main Campus"
+    ],
+    "credentialing_status": [
+      "Pending"
+    ],
+    "accepting_new_patients": [
+      "Yes"
+    ],
+    "issues": [
+      "Pending credentials with new-patient acceptance."
+    ],
+    "provenance": [
+      {
+        "source": "credentialing",
+        "record_id": "C005",
+        "original": {
+          "source_record_id": "C005",
+          "provider_id": "DEMO-005",
+          "first_name": "Nora",
+          "last_name": "Ellis",
+          "specialty": "Neurology",
+          "practice_location": "Main Campus",
+          "credentialing_status": "Pending"
+        }
+      },
+      {
+        "source": "scheduling",
+        "record_id": "S005",
+        "original": {
+          "record_id": "S005",
+          "clinician_id": "DEMO-005",
+          "given_name": "Nora",
+          "family_name": "Ellis",
+          "specialty_name": "Neurology",
+          "site": "Main Campus",
+          "accepting_new_patients": "Yes"
+        }
+      }
+    ]
+  },
+  {
+    "provider_id": "DEMO-006",
+    "review_reference": "DEMO-006",
+    "first_name": [
+      "Ethan"
+    ],
+    "last_name": [
+      "Brooks"
+    ],
+    "specialty": [
+      "Cardiology"
+    ],
+    "location": [
+      "North Campus",
+      "South Campus"
+    ],
+    "credentialing_status": [
+      "Active"
+    ],
+    "accepting_new_patients": [
+      "Yes"
+    ],
+    "issues": [
+      "Different location values; review required."
+    ],
+    "provenance": [
+      {
+        "source": "credentialing",
+        "record_id": "C006",
+        "original": {
+          "source_record_id": "C006",
+          "provider_id": "DEMO-006",
+          "first_name": "Ethan",
+          "last_name": "Brooks",
+          "specialty": "Cardiology",
+          "practice_location": "North Campus",
+          "credentialing_status": "Active"
+        }
+      },
+      {
+        "source": "credentialing",
+        "record_id": "C007",
+        "original": {
+          "source_record_id": "C007",
+          "provider_id": "DEMO-006",
+          "first_name": "Ethan",
+          "last_name": "Brooks",
+          "specialty": "Cardiology",
+          "practice_location": "North Campus",
+          "credentialing_status": "Active"
+        }
+      },
+      {
+        "source": "scheduling",
+        "record_id": "S006",
+        "original": {
+          "record_id": "S006",
+          "clinician_id": "DEMO-006",
+          "given_name": "Ethan",
+          "family_name": "Brooks",
+          "specialty_name": "Cardiology",
+          "site": "South Campus",
+          "accepting_new_patients": "Yes"
+        }
+      }
+    ]
+  },
+  {
+    "provider_id": null,
+    "review_reference": "UNRESOLVED-15",
+    "first_name": [
+      "Ava"
+    ],
+    "last_name": [
+      "Morgan"
+    ],
+    "specialty": [
+      "Internal Medicine"
+    ],
+    "location": [
+      "East Clinic"
+    ],
+    "credentialing_status": [],
+    "accepting_new_patients": [
+      "Yes"
+    ],
+    "issues": [
+      "Missing provider identifier; manual matching required."
+    ],
+    "provenance": [
+      {
+        "source": "scheduling",
+        "record_id": "S007",
+        "original": {
+          "record_id": "S007",
+          "clinician_id": "",
+          "given_name": "Ava",
+          "family_name": "Morgan",
+          "specialty_name": "Internal Medicine",
+          "site": "East Clinic",
+          "accepting_new_patients": "Yes"
+        }
+      }
+    ]
+  },
+  {
+    "provider_id": null,
+    "review_reference": "UNRESOLVED-8",
+    "first_name": [
+      "Ava"
+    ],
+    "last_name": [
+      "Morgan"
+    ],
+    "specialty": [
+      "Internal Medicine"
+    ],
+    "location": [
+      "East Clinic"
+    ],
+    "credentialing_status": [
+      "Active"
+    ],
+    "accepting_new_patients": [],
+    "issues": [
+      "Missing provider identifier; manual matching required."
+    ],
+    "provenance": [
+      {
+        "source": "credentialing",
+        "record_id": "C008",
+        "original": {
+          "source_record_id": "C008",
+          "provider_id": "",
+          "first_name": "Ava",
+          "last_name": "Morgan",
+          "specialty": "Internal Medicine",
+          "practice_location": "East Clinic",
+          "credentialing_status": "Active"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,206 @@
+[
+  {
+    "provider_id": "DEMO-001",
+    "review_reference": "DEMO-001",
+    "first_name": [
+      "Maya"
+    ],
+    "last_name": [
+      "Bennett"
+    ],
+    "specialty": [
+      "Cardiology"
+    ],
+    "location": [
+      "North Campus"
+    ],
+    "credentialing_status": [
+      "Active"
+    ],
+    "accepting_new_patients": [
+      "Yes"
+    ],
+    "issues": [],
+    "provenance": [
+      {
+        "source": "credentialing",
+        "record_id": "C001",
+        "original": {
+          "source_record_id": "C001",
+          "provider_id": "DEMO-001",
+          "first_name": "Maya",
+          "last_name": "Bennett",
+          "specialty": "Cardiology",
+          "practice_location": "North Campus",
+          "credentialing_status": "Active"
+        }
+      },
+      {
+        "source": "scheduling",
+        "record_id": "S001",
+        "original": {
+          "record_id": "S001",
+          "clinician_id": "DEMO-001",
+          "given_name": "Maya",
+          "family_name": "Bennett",
+          "specialty_name": "Cardio",
+          "site": "North Campus",
+          "accepting_new_patients": "Yes"
+        }
+      }
+    ]
+  },
+  {
+    "provider_id": "DEMO-002",
+    "review_reference": "DEMO-002",
+    "first_name": [
+      "Oliver"
+    ],
+    "last_name": [
+      "Chen"
+    ],
+    "specialty": [
+      "Internal Medicine"
+    ],
+    "location": [
+      "Main Campus"
+    ],
+    "credentialing_status": [
+      "Active"
+    ],
+    "accepting_new_patients": [
+      "Yes"
+    ],
+    "issues": [],
+    "provenance": [
+      {
+        "source": "credentialing",
+        "record_id": "C002",
+        "original": {
+          "source_record_id": "C002",
+          "provider_id": "DEMO-002",
+          "first_name": "Oliver",
+          "last_name": "Chen",
+          "specialty": "Internal Medicine",
+          "practice_location": "Main Campus",
+          "credentialing_status": "Active"
+        }
+      },
+      {
+        "source": "scheduling",
+        "record_id": "S002",
+        "original": {
+          "record_id": "S002",
+          "clinician_id": "DEMO-002",
+          "given_name": "Oliver",
+          "family_name": "Chen",
+          "specialty_name": "Internal Med",
+          "site": "Main Campus",
+          "accepting_new_patients": "Yes"
+        }
+      }
+    ]
+  },
+  {
+    "provider_id": "DEMO-003",
+    "review_reference": "DEMO-003",
+    "first_name": [
+      "Sofia"
+    ],
+    "last_name": [
+      "Patel"
+    ],
+    "specialty": [
+      "Orthopedic Surgery"
+    ],
+    "location": [
+      "South Campus"
+    ],
+    "credentialing_status": [
+      "Active"
+    ],
+    "accepting_new_patients": [
+      "No"
+    ],
+    "issues": [],
+    "provenance": [
+      {
+        "source": "credentialing",
+        "record_id": "C003",
+        "original": {
+          "source_record_id": "C003",
+          "provider_id": "DEMO-003",
+          "first_name": "Sofia",
+          "last_name": "Patel",
+          "specialty": "Orthopedic Surgery",
+          "practice_location": "South Campus",
+          "credentialing_status": "Active"
+        }
+      },
+      {
+        "source": "scheduling",
+        "record_id": "S003",
+        "original": {
+          "record_id": "S003",
+          "clinician_id": "DEMO-003",
+          "given_name": "Sofia",
+          "family_name": "Patel",
+          "specialty_name": "Orthopedics",
+          "site": "South Campus",
+          "accepting_new_patients": "No"
+        }
+      }
+    ]
+  },
+  {
+    "provider_id": "DEMO-004",
+    "review_reference": "DEMO-004",
+    "first_name": [
+      "James"
+    ],
+    "last_name": [
+      "Rivera"
+    ],
+    "specialty": [
+      "Family Medicine"
+    ],
+    "location": [
+      "West Clinic"
+    ],
+    "credentialing_status": [
+      "Active"
+    ],
+    "accepting_new_patients": [
+      "Yes"
+    ],
+    "issues": [],
+    "provenance": [
+      {
+        "source": "credentialing",
+        "record_id": "C004",
+        "original": {
+          "source_record_id": "C004",
+          "provider_id": "DEMO-004",
+          "first_name": "James",
+          "last_name": "Rivera",
+          "specialty": "Family Medicine",
+          "practice_location": "West Clinic",
+          "credentialing_status": "Active"
+        }
+      },
+      {
+        "source": "scheduling",
+        "record_id": "S004",
+        "original": {
+          "record_id": "S004",
+          "clinician_id": "DEMO-004",
+          "given_name": "James",
+          "family_name": "Rivera",
+          "specialty_name": "Family Practice",
+          "site": "West Clinic",
+          "accepting_new_patients": "Yes"
+        }
+      }
+    ]
+  }
+]
