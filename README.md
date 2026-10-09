@@ -1,41 +1,43 @@
 # Healthcare Data Foundations
 
-### Turning fragmented healthcare data into consistent, traceable information
+## Turned Fragmented Physician Data Into Traceable Information
 
-Healthcare organizations can connect systems and still struggle to use the data they exchange. Different definitions, duplicate records and conflicting information can undermine patient access, operational decisions and confidence in the applications consuming that data.
+A working demonstration of business requirements, explicit data-quality rules and traceable results. Developed by Alan R. Bateman with AI assistance.
 
-This working demonstration brings together fictional physician records from credentialing and scheduling systems. It standardizes information, preserves its source and separates records ready for downstream use from records requiring human review.
+### Context and Business Challenge
 
-## Why this matters
+Healthcare organizations can connect systems and still struggle to use the data they exchange. Physician records from credentialing and scheduling can contain inconsistent specialties, duplicates and conflicting information. This demonstration makes those concerns visible before data reaches a directory or another application.
 
-A physician directory needs more than names and contact details. Its usefulness depends on reliable specialties, locations and availability, and a clear process for resolving discrepancies.
+### Actions Taken
 
-This project demonstrates how explicit business rules can make those discrepancies visible before information reaches another application.
+- I framed the demonstration around physician-data problems informed by my hospital operations, implementation and enterprise healthcare software experience.
+- I used AI to help draft the Python code and documentation, configured the repository, ran the workflow and confirmed the summary against expected results.
+- I used explicit rules to normalize specialty labels while retaining original values and source identifiers.
+- I consolidated an identical duplicate without losing either source record ID and flagged conflicting locations or credentialing concerns for review.
+- I kept records with missing provider identifiers separate rather than assume that matching names represented the same physician.
 
-## Verified demonstration results
+### Results
 
-The workflow ran successfully with the following results:
-
-| Measure | Result |
+| Measure | Verified result |
 |---|---:|
-| Source records processed | 15 |
-| Consolidated records passing demonstration checks | 4 |
-| Records requiring review | 4 |
+| Fictional source records processed | 15 |
+| Consolidated output records | 8 |
+| Outputs passing demonstration checks | 4 |
+| Outputs requiring human review | 4 |
 | Identical duplicate records consolidated | 1 |
+| Input records with provenance retained | 15 of 15 (100%) |
 
-The eight output records retain provenance for all 15 input records. The two records without provider identifiers remain separate.
+The two records without provider identifiers remain separate. Four records passing these checks does not establish clinical accuracy or production readiness. Human review and correction of flagged records are outside this version.
 
-### Decisions illustrated
+### Leadership and Strategic Impact
 
-- **Standardize terminology:** Convert specialty abbreviations into consistent labels while retaining the original values.
-- **Preserve evidence:** Consolidate an identical duplicate without losing either source record ID.
-- **Expose uncertainty:** Flag different locations rather than assume one source is correct.
-- **Identify business-rule concerns:** Flag pending credentials alongside acceptance of new patients.
-- **Avoid unsupported matching:** Keep records with missing identifiers separate, even when their names match.
+This work demonstrates how I translate a business need into explicit data requirements and evaluate whether the output is usable. It makes uncertainty visible rather than hiding discrepancies behind a clean-looking result. The same reasoning applies when business and technical teams need to agree on definitions, ownership and downstream requirements.
 
-Four records passing these checks does not establish clinical accuracy or production readiness.
+### Transferable Skills
 
-## Explore the demonstration
+Business requirements • Data quality • Source traceability • Practical AI use • Outcome verification • Communication across business and technical teams
+
+### Explore the Demonstration
 
 - [Credentialing input](data/credentialing.csv)
 - [Scheduling input](data/scheduling.csv)
@@ -47,15 +49,7 @@ Four records passing these checks does not establish clinical accuracy or produc
 
 The linked JSON files are saved results from the verified run.
 
-## My perspective and development approach
-
-My background spans hospital operations, technology implementation, consulting and enterprise healthcare software sales, including physician data and provider directory solutions.
-
-I bring that experience to framing business requirements, evaluating stakeholder needs and assessing whether technology produces useful outcomes.
-
-This demonstration was developed with AI assistance. AI helped draft the code and documentation; I configured the repository, ran the workflow and confirmed the summary against the expected results. The processing rules are explicit and deterministic. No AI model is called during execution.
-
-## Run it
+### Run It
 
 In GitHub, open **Actions → Run Healthcare Data Demo → Run workflow**.
 
@@ -63,12 +57,14 @@ The workflow runs the Python script, displays a summary and provides downloadabl
 
 Alternatively, with Python 3.13 installed, run from the repository root:
 
-`python scripts/curate.py`
+```sh
+python scripts/curate.py
+```
 
 No third-party Python packages are required.
 
-## Scope
+### Scope and Development Approach
 
 All records are fictional. This is a small portfolio demonstration, not a production interoperability platform. It uses no patient information, employer data or proprietary product code.
 
-The current scope covers field mapping, specialty normalization, identifier-based grouping, duplicate handling, review flags and source traceability. Human review and correction of flagged records are outside this version.
+AI assisted development. Processing rules are explicit and deterministic; no AI model is called during execution. The current scope covers field mapping, specialty normalization, identifier-based grouping, duplicate handling, review flags and source traceability.
